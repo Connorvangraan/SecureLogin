@@ -1,0 +1,16 @@
+  <html>
+    <body> <!-- the body tag is required or the CAPTCHA may not show on some browsers -->
+      <!-- your HTML content -->
+	  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+      <form method="post" action="recaptchacheck.php">
+        <?php
+          require_once('recaptchalib.php');
+          $publickey = "6Ldc4QgaAAAAABj4o1H677k7eOjQH-9WpvfMVVUQ";
+          echo recaptcha_get_html($publickey);
+        ?>
+        <input type="submit" />
+      </form>
+
+      <!-- more of your HTML content -->
+    </body>
+  </html>
